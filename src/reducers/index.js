@@ -30,17 +30,21 @@ export const carSalesReducer = (state = initialState, action) => {
       };
 
     case REMOVE_FEATURE:
+      console.log(state.car.features);
+      console.log(action);
       return {
         ...state,
         car: {
           ...state.car,
-          features: [
-            state.car.features.filter(feature => {
-              if (feature != action.payload) {
-              }
-            })
-          ]
-        }
+
+          features: state.car.features.filter(feature => {
+            if (feature.id !== action.payload.id) {
+              //console.log(feature);
+              return feature;
+            }
+          })
+        },
+        additionalPrice: state.additionalPrice - action.payload.price
       };
 
     default:
