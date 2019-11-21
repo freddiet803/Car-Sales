@@ -1,8 +1,10 @@
-export const ADD_FEATURE = 'ADD_FEATURE';
+export const ADD_FEATURE = 'ADD_FEATURE'; //action type
 
 export const addFeature = feature => {
+  // action creator
   console.log(feature);
   return {
+    // action
     type: ADD_FEATURE,
     payload: feature
   };

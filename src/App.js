@@ -10,7 +10,7 @@ import { addFeature, removeFeature } from './actions';
 const App = props => {
   const removeFeature = item => {
     // dispatch an action here to remove an item
-    props.removeFeature(item); //see what happens without props
+    props.removeFeature(item); //see what happens without props-- NO WORKY
   };
 
   const addFeature = item => {

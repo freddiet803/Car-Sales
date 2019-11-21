@@ -35,8 +35,8 @@ export const carSalesReducer = (state = initialState, action) => {
       };
 
     case REMOVE_FEATURE:
-      console.log(state.car.features);
-      console.log(action);
+      // console.log(state.car.features);
+      // console.log(action);
       return {
         ...state,
         car: {
